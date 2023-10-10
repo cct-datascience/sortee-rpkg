@@ -26,7 +26,14 @@ Go through introductions in SORTEE facilitator checklist
 Remember, even if you don't ever make an R package that goes on CRAN (or any R package at all), the skills covered in this workshop will be helpful!
 :::
 
-# Project Setup
+# Package Setup
+
+## Load needed packages
+
+```{r}
+#| eval: true
+library(devtools)
+```
 
 ## Create new package with `usethis`
 
@@ -37,32 +44,6 @@ usethis::create_package("path/to/packagename")
 ::: callout-note
 This will work best if learners start NOT in a project, so that tab auto-complete for the file path will start at `~/`.
 :::
-
-## Load needed packages
-
-```{r}
-#| eval: true
-library(devtools)
-```
-
-# Package Setup
-
-## Convert into a package
-
-We'll use `create_package()` to convert our current project to a package.
-It takes a `path` argument that we'll supply with `here::here()`
-
-```{r}
-here() #absolute path to current project
-```
-
-```{r}
-create_package(here()) #converts current project to skeleton R package.  Overwrites files.
-```
-
-This will open a new RStudio window, so you can close the old one.
-
-Re-load devtools with `library(devtools)`
 
 ## Files created
 
@@ -83,14 +64,6 @@ Re-load devtools with `library(devtools)`
 -   run `use_readme_md()` and edit the README.
 
 -   You could use `use_readme_rmd()` if you want a README that executes some code, like running an example.
-
-## Sync with GitHub
-
--   Commit (message = "convert to package") and push
-
--   Inspect GitHub repo, notice how README.md is rendered
-
--   Notice how files in .gitignore aren't there
 
 # Functions
 
@@ -248,7 +221,22 @@ git_sitrep()
 
 Now everything should be set (except maybe `upstream`) with no ❌s
 
-## Add A dependency
+## Sync with GitHub
+
+```{r}
+use_git() #might not be necessary
+use_github()
+```
+
+-   Inspect files on GitHub
+
+-   Notice that files in .gitignore aren't there
+
+-   Notice how README.md is rendered
+
+-   Now your package can be installed by anyone with `remotes::install_github("username/packagename")` or `pak::pkg_install("username/packagename")`
+
+# Add A dependency
 
 Let's make the output colorful with the `cli` package!
 
@@ -370,7 +358,11 @@ We'll use GitHub Actions and `usethis` to set this up.
 
 ## Installing from GitHub
 
--   Add instructions to README for using `remotes::install_github("username/reponame")` to install
+-   Add instructions to README for using `remotes::install_github("username/packagename")` or `pak::pkg_install("username/packagename")` to install from GitHub
+-   You could also set up r-universe.
+
+## Package Website
+
 -   Set up a website for your package with `use_pkgdown()` and `use_pkgdown_github_pages()`
 
 # Polishing your Package
