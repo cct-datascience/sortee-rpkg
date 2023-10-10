@@ -1,27 +1,30 @@
 ---
 title: "Making Your First R Package 📦"
-subtitle: "ResBazAZ 2023"
+subtitle: "SORTEE 2023"
 author: 
   - name: Eric R. Scott
     orcid: 0000-0002-7430-7879
     affiliations: "Communications & Cyber Technologies, University of Arizona"
 format: 
   revealjs:
-    theme: simple
+    theme: [simple, custom.scss]
+logo: logo.png
 editor: visual
 ---
 
 ## Why make an R package?
 
+::: incremental
 -   You find yourself copying and pasting code from one project to another
 
 -   You have data set you want to document and share
 
 -   Your R code will be helpful for others doing similar analyses and you want to share
+:::
 
 ## What makes an R package?
 
--   DESCRIPTION
+-   `DESCRIPTION`
 
     -   Metadata
 
@@ -29,7 +32,7 @@ editor: visual
 
 -   R code (functions)
 
--   Data
+-   Data (optional)
 
 -   Documentation
 
@@ -46,7 +49,7 @@ In the workshop today we will:
 
 ::: columns
 ::: {.column width="50%"}
-![](https://r-pkgs.org/images/cover.png){fig-alt="Cover of R Packages book by Hadley Wickham.  An eagle perches on top of the title block"}
+![](https://r-pkgs.org/images/cover-2e-small.png){fig-alt="Cover of R Packages book by Hadley Wickham.  An eagle perches on top of the title block"}
 :::
 
 ::: {.column width="50%"}
