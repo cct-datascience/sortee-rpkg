@@ -93,11 +93,11 @@ Today we are making a toy package, so your package name doesn't need to follow t
 ## Making a New Package
 
 There are *several* ways to go about making a new R package that can be shared.
-We're going to go with the "GitHub first" method today:
+We're going to go with the "local first" method today:
 
-1.  Create an empty repository on GitHub with our package's name
-2.  Clone that repository as a new R project
-3.  Convert that R project into an R package
+1.  Create a new package on your computer
+2.  Edit template files and add some basics
+3.  Upload and connect that package to a GitHub repository
 
 ## Git and GitHub
 
@@ -120,15 +120,14 @@ Check out Andrew Antaya's session *Collaborating on code with GitHub* on Wednesd
 ```{r}
 #| echo: true
 library(devtools)
-library(here)
-#if these lines give errors, you may need to install these packages:
+## if this errors, you may need to install devtools with:
 # install.packages("devtools")
-# install.packages("here")
 ```
 
--   `devtools` is a "meta package" kind of like `tidyverse`
+`devtools` is a "meta package", kind of like `tidyverse`.
+One of the packages it loads is [`usethis`](https://usethis.r-lib.org/), which we will be using extensively today.
 
--   `here` will only be used during the setup process for this workshop
+# One-Time (Per Computer) Setup 🛠️💻
 
 ## Check for git
 
@@ -153,6 +152,10 @@ xcode-select --install
 
 ### Windows
 
-Download the installer here: <https://git-scm.com/download/win>
+Download the installer here: <https://gitforwindows.org/>
+
+## Setup git and GitHub
+
+Run through the checklist output by `usethis::git_sitrep()` (we'll do this together, don't worry!)
 
 # Let's Get Started!
