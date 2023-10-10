@@ -2,10 +2,10 @@
 title: "Making Your First R Package 📦"
 subtitle: "SORTEE 2023"
 author: 
-  - name: Eric R. Scott
-    orcid: 0000-0002-7430-7879
+  - name: Eric R. Scott [`r fontawesome::fa("mastodon")`](https://fosstodon.org/@LeafyEricScott) [`r fontawesome::fa("github")`](https://github.com/Aariq) [`r fontawesome::fa("link")`](https://www.ericrscott.com) [`r fontawesome::fa("orcid")`](https://orcid.org/0000-0002-7430-7879)
     affiliations: "Communications & Cyber Technologies, University of Arizona"
-    email: ericrscott@arizona.edu
+    # orcid: 0000-0002-7430-7879
+    # email: ericrscott@arizona.edu
 format: 
   revealjs:
     theme: [simple, custom.scss]
