@@ -1,0 +1,8 @@
+- source: slides.qmd
+  quarto-pub:
+    - id: c74232b4-6bb1-4bdb-97ad-9734f73d3a65
+      url: 'https://cct-datascience.quarto.pub/sortee-rpkg-slides'
+- source: instructor_notes.qmd
+  quarto-pub:
+    - id: 452a46c0-3819-419d-a705-f758a0f7c501
+      url: 'https://cct-datascience.quarto.pub/sortee-rpkg-notes'

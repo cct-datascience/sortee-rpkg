@@ -5,9 +5,11 @@ author:
   - name: Eric R. Scott
     orcid: 0000-0002-7430-7879
     affiliations: "Communications & Cyber Technologies, University of Arizona"
+    email: ericrscott@arizona.edu
 format: 
   revealjs:
     theme: [simple, custom.scss]
+email-obfuscation: javascript
 logo: logo.png
 editor: visual
 ---

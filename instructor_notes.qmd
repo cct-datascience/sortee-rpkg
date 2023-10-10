@@ -16,7 +16,11 @@ execute:
 
 # Introduction
 
-[Slides](https://cct-datascience.quarto.pub/making-your-first-r-pkg-slides/#/title-slide)
+::: callout-important
+Go through introductions in SORTEE facilitator checklist
+:::
+
+[Slides](https://cct-datascience.quarto.pub/sortee-rpkg-slides/)
 
 ::: callout-tip
 Remember, even if you don't ever make an R package that goes on CRAN (or any R package at all), the skills covered in this workshop will be helpful!
