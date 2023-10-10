@@ -32,7 +32,7 @@ editor: visual
 
     -   Dependencies & requirements
 
--   R code (functions)
+-   `R/` folder with .R files containing functions
 
 -   Data (optional)
 

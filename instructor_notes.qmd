@@ -20,6 +20,8 @@ execute:
 Go through introductions in SORTEE facilitator checklist
 :::
 
+Introduce your background as an ecologist!
+
 [Slides](https://cct-datascience.quarto.pub/sortee-rpkg-slides/)
 
 ::: callout-tip
