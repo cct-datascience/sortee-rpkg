@@ -154,8 +154,4 @@ xcode-select --install
 
 Download the installer here: <https://gitforwindows.org/>
 
-## Setup git and GitHub
-
-Run through the checklist output by `usethis::git_sitrep()` (we'll do this together, don't worry!)
-
 # Let's Get Started!

@@ -24,94 +24,22 @@ Remember, even if you don't ever make an R package that goes on CRAN (or any R p
 
 # Project Setup
 
-## Create empty repo on GitHub
+## Create new package with `usethis`
 
--   repo name = package name
+``` r
+usethis::create_package("path/to/packagename")
+```
 
--   Copy https url
-
-## Create new R project from repo
-
--   New Project \> Version Control \> Git, paste in URL
+::: callout-note
+This will work best if learners start NOT in a project, so that tab auto-complete for the file path will start at `~/`.
+:::
 
 ## Load needed packages
 
 ```{r}
 #| eval: true
 library(devtools)
-library(here)
 ```
-
-# Git/GitHub setup
-
-::: callout-tip
-This is all a one-time per computer setup
-:::
-
-## Configure Git
-
-Get a checklist of what to do to set things up:
-
-```{r}
-#| eval: true
-git_sitrep()
-```
-
-Add a global `.gitignore` to prevent you from accidentally sharing sensitive files on GitHub:
-
-```{r}
-git_vaccinate()
-```
-
-Introduce yourself to git:
-
-```{r}
-use_git_config(
-  user.name = "your name",
-  user.email = "youremail@arizona.com", #email you used to sign up for GitHub account
-)
-
-```
-
-Set a default branch name:
-
-```{r}
-#sets your default branch name to "main"
-git_default_branch_configure()
-```
-
-## Git and GitHub
-
-There are some other things to do in `git_sitrep()`, but first, let's make our first commit.
-Make a commit using the git pane in RStudio.
-Commit message can be something like "initial commit"
-
-```{r}
-#check how we're doing
-git_sitrep()
-```
-
-Set up a personal access token (PAT).
-This is necessary to securely send things between your computer and GitHub.
-
-```{r}
-create_github_token() #takes you to external website. Add description, but keep defaults
-```
-
-Store that token on your computer:
-
-```{r}
-gitcreds::gitcreds_set()
-#paste in PAT from GitHub
-```
-
-Double-check that it worked:
-
-```{r}
-git_sitrep()
-```
-
-Now everything should be set (except maybe `upstream`) with no ❌s
 
 # Package Setup
 
@@ -241,7 +169,80 @@ should pass
 
 ## Install
 
-Should be able to install the package now, load it with `library()`, etc.
+Should be able to install the package with `install()` now, load it with `library()`, etc.
+
+# Git/GitHub setup
+
+If we want other people to be able to install our package, we need to put it on GitHub
+
+::: callout-tip
+This is all a one-time per computer setup
+:::
+
+## Configure Git
+
+Get a checklist of what to do to set things up:
+
+```{r}
+#| eval: true
+git_sitrep()
+```
+
+Add a global `.gitignore` to prevent you from accidentally sharing sensitive files on GitHub:
+
+```{r}
+git_vaccinate()
+```
+
+Introduce yourself to git:
+
+```{r}
+use_git_config(
+  user.name = "your name",
+  user.email = "youremail@arizona.com", #email you used to sign up for GitHub account
+)
+
+```
+
+Set a default branch name:
+
+```{r}
+#sets your default branch name to "main"
+git_default_branch_configure()
+```
+
+## Git and GitHub
+
+There are some other things to do in `git_sitrep()`, but first, let's make our first commit.
+Make a commit using the git pane in RStudio.
+Commit message can be something like "initial commit"
+
+```{r}
+#check how we're doing
+git_sitrep()
+```
+
+Set up a personal access token (PAT).
+This is necessary to securely send things between your computer and GitHub.
+
+```{r}
+create_github_token() #takes you to external website. Add description, but keep defaults
+```
+
+Store that token on your computer:
+
+```{r}
+gitcreds::gitcreds_set()
+#paste in PAT from GitHub
+```
+
+Double-check that it worked:
+
+```{r}
+git_sitrep()
+```
+
+Now everything should be set (except maybe `upstream`) with no ❌s
 
 ## Add A dependency
 
@@ -272,6 +273,10 @@ greet("Eric")
 
 4.  Inspect DESCRIPTION and run `check()` again
 
+## Practice commit + push
+
+Inspect on GitHub
+
 # Data
 
 ## Add a data set
@@ -282,7 +287,7 @@ greet("Eric")
 
 ```{r}
 #read in data as an R object
-baked_goods <- read.csv("https://www.ericrscott.com/files/baked_goods_long.csv")
+baked_goods <- read.csv("https://raw.githubusercontent.com/cct-datascience/sortee-rpkg/main/baked_goods_long.csv")
 #use_data() on the R object to add to your package
 use_data(baked_goods)
 ```
@@ -347,9 +352,11 @@ Continuous Integration (CI) is a practice of automatically building your package
 
 We'll use GitHub Actions and `usethis` to set this up.
 
--   `use_github_action_check_release()` sets up a *basic* action that runs `check()` using the latest release of R running on Linux
+-   `use_github_action()` gives a choice of 4 common actions to set up
 
--   `use_github_action_check_standard()` runs a more intense check of your package on linux, macOs, and Windows using the latest release of R and the development version of R.
+-   Choose "check-standard"
+
+-   Other options here: <https://github.com/r-lib/actions/tree/v2/examples#example-workflows>
 
 -   Add a badge to your readme with `use_github_actions_badge()`
 
