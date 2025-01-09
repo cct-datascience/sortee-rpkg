@@ -49,7 +49,7 @@ In the workshop today we will:
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](https://r-pkgs.org/images/cover-2e-small.png){fig-alt="Cover of R Packages book by Hadley Wickham.  An eagle perches on top of the title block"}
 :::
@@ -57,11 +57,11 @@ In the workshop today we will:
 ::: {.column width="50%"}
 [R Packages (2e)](https://r-pkgs.org/) goes into more detail on just about everything we'll cover today **and more**!
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](https://devguide.ropensci.org/images/cover.png){fig-alt="Cover image for rOpenSci Packages book"}
 :::
@@ -70,7 +70,7 @@ In the workshop today we will:
 [rOpenSci](https://ropensci.org/) is a great organization that supports development of R packages.
 Their [book](https://devguide.ropensci.org/index.html) is another great resource to learn more.
 :::
-:::
+:::::
 
 ## Naming your package
 
@@ -134,7 +134,8 @@ One of the packages it loads is [`usethis`](https://usethis.r-lib.org/), which w
 ## Check for git
 
 Check that RStudio knows where git is on your computer.
-Go to Tools \> Global Options... and select the Git/SVN option.
+Go to Tools \> Global Options...
+and select the Git/SVN option.
 
 Make sure the checkbox is checked and there is something in the "Git executable" box
 

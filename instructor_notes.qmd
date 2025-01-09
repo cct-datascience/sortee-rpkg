@@ -1,6 +1,6 @@
 ---
 title: "Making Your First R Package 📦 (Instructor Notes)"
-subtitle: "ResBazAZ 2023"
+subtitle: "SORTEE 2023"
 author: 
   - name: Eric R. Scott
     orcid: 0000-0002-7430-7879
