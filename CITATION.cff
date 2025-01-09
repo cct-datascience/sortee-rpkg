@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Making Your First R Package (SORTEE 2023) source materials
+message: 'If you adapt this curriculum, please cite this repository'
+type: software
+authors:
+  - given-names: Eric R
+    family-names: Scott
+    email: ericrscott@arizona.edu
+    affiliation: >-
+      University of Arizona, Communications & Cyber
+      Technologies
+    orcid: 'https://orcid.org/0000-0002-7430-7879'
+url: 'https://cct-datascience.quarto.pub/sortee-rpkg-notes/'
+abstract: >
+  Source materials (Quarto .qmd files) for slides and
+  instructor notes for "Making Your First R Package"
+  workshop presented at SORTEE 2023.
+keywords:
+  - r package
+  - workshop
+  - r
+license: CC-BY-4.0
+date-released: '2023-10-13'
